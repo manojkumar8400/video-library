@@ -1,0 +1,28 @@
+.routes-container {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+}
+
+.home-container {
+    height: 91.5vh;
+    background-image: url(https://images.pexels.com/photos/827209/pexels-photo-827209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.explore-btn {
+    padding: 7px 1.4rem;
+    color: var(--primary-color);
+    border: 3px solid var(--orange-900);
+    background-color: var(--secondary-color);
+    border-radius: .5rem;
+}
+
+.category-1{
+    font-size: 1rem;
+    padding: 5px .5rem;
+    border-radius: 2rem;
+    color: var(--primary-color);
+    border: 2px solid var(--orange-900);
+    background-color: transparent;
+}
