@@ -1,0 +1,16 @@
+.sidebar-container {
+    height: 91.5vh;
+    top: 3.9rem;
+    background-color: var(--gray-100);
+}
+
+.sidebar-icon {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.sidebar-icon:hover {
+    background-color: var(--gray-200);
+}

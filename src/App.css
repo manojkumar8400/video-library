@@ -1,51 +1,25 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Creepster&family=Inspiration&family=Libre+Baskerville&family=Lobster&family=Merriweather&family=Pacifico&family=Playfair+Display:wght@600&family=Roboto+Slab:wght@300&family=Tai+Heritage+Pro&family=Yellowtail&display=swap');
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Libre Baskerville', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-color:#fff;
+  --secondary-color:rgb(24, 124, 163);
+  --orange-900:orange;
+  --gray-100: rgb(243 244 246);
+  --gray-200: rgb(231, 230, 230);
+  --black-900: rgb(0, 0, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: var(--black-900);
 }
 
-.App-header {
-  background-color: #22201c;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.brand-title {
-  font-size: 3rem;
-  color: #d9d9d9;
-}
-
-.brand-title span {
-  color: #ffde59;
-}
-
-.brand-description {
-  font-size: 1.4rem;
-}
-
-.links {
-  display: flex;
-}
-
-.links a {
-  color: #d9d9d9;
-  font-size: 1.2rem;
-  margin: 1rem;
+button {
+  cursor: pointer;
 }

@@ -1,0 +1,158 @@
+/*              Flex             */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.gap-16 {
+    gap: 1rem;
+}
+
+.gap-32 {
+    gap: 2rem;
+}
+
+/*              Grid                 */
+
+.grid {
+    display: grid;
+}
+
+.grid-center {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/*              Positions            */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-11 {
+    z-index: 11;
+}
+
+/*              Font Size                */
+
+.fs-16 {
+    font-size: 1rem;
+}
+
+.fs-24 {
+    font-size: 1.5rem;
+}
+
+.fs-32 {
+    font-size: 2rem;
+}
+
+/*              Margin                   */
+
+.m-tb-8 {
+    margin: .5rem 0;
+}
+
+.m-tb-16 {
+    margin: 1rem 0;
+}
+
+.m-tb-32 {
+    margin: 2rem 0;
+}
+
+.mr-8{
+    margin-right: .5rem;
+}
+.mr-16 {
+    margin-right: 1rem;
+}
+
+.mr-32 {
+    margin-right: 2rem;
+}
+
+/*              Padding                  */
+
+.p-16 {
+    padding: 1rem;
+}
+
+.p-lr-8 {
+    padding: 0 .5rem;
+}
+
+.border-1-s {
+    border: 1px solid;
+}
+
+/*              Other Css Property       */
+
+.b-none {
+    border: none;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
