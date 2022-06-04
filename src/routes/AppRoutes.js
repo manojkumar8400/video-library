@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { Header, SideBar } from '../components/index';
-import { Home } from '../pages/index';
+import { Explore, Home } from '../pages/index';
 
 export const AppRoutes = () => {
 
@@ -16,6 +16,7 @@ export const AppRoutes = () => {
                 </div>
                 <Routes>
                     <Route path='/' element={< Home />} />
+                    <Route path='/explore' element={< Explore />} />
                 </Routes>
             </div>
         </div>

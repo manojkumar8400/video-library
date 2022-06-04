@@ -4,7 +4,7 @@ import "./HomeScreen.css";
 export const Home = () => {
 
     return (
-        <div className='home-container grid-center'>
+        <main className='home-container grid-center'>
             <div className='text-align'>
                 <h2>Welcome to ViewTube</h2>
                 <button className='explore-btn fs-16 m-tb-32'>Explore</button>
@@ -16,6 +16,6 @@ export const Home = () => {
                     <button className="category-1">जोश Talks</button>
                 </section>
             </div>
-        </div>
+        </main>
     )
 }
