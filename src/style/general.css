@@ -108,6 +108,9 @@
 
 /*              Margin                   */
 
+.m-auto{
+    margin: auto;
+}
 .m-tb-8 {
     margin: .5rem 0;
 }

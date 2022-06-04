@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import "./VideoCard.css";
 import { addFeatures } from '../../app/slice/operatorSlice';
 
-export const VIdeoCard = ({ video }) => {
+export const VideoCard = ({ video }) => {
 
     const dispatch = useDispatch();
     const [addModel, setAddModel] = useState(false);
@@ -25,7 +25,7 @@ export const VIdeoCard = ({ video }) => {
                     <span>{video.releaseTime}</span>
                 </section>
             </section>
-            <span onClick={_ => { dispatch(addFeatures(video._id)), setAddModel(addModel ? false : true) }} className='material-icons dot-icon absolute'>more_vert</span>
+            <span onClick={_ => { dispatch(addFeatures(video._id)), setAddModel(addModel ? false : true) }} className='material-icons more-feature-icon absolute'>more_vert</span>
             {
                 video._id === addfeaturesIcon && addModel ?
                     <section className='more-option-model absolute'>
