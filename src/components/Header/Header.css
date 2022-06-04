@@ -2,8 +2,7 @@
     grid-template-columns: 15rem 1fr 15rem;
     height: 8.5vh;
     top: 0;
-    background-color: var(--primary-color);
-    box-shadow: 0 1px 5px var(--black-900);
+    box-shadow: 0 1px 2px var(--black-900);
     background-color: var(--gray-100);
 }
 
@@ -18,7 +17,7 @@
 .vl-logo {
     width: 1.7rem;
     height: 1.7rem;
-    margin-right: 5px;
+    margin-right: 1px;
     animation: spin 3s infinite;
 }
 
@@ -43,7 +42,7 @@
 .search-btn {
     background-color: var(--primary-color);
     border: 1px solid;
-    padding: 1.5px;
+    padding: 1.6px;
     cursor: grab;
 }
 

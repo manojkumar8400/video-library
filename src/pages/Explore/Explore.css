@@ -1,0 +1,13 @@
+.filter-chips {
+    top: 8.5vh;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--black-900);
+}
+
+.filter-chips button {
+    font-size: .9rem;
+    padding: 6px .8rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 1.2rem;
+    margin: .5rem;
+}
