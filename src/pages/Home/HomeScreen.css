@@ -15,12 +15,20 @@
     color: var(--primary-color);
     border: 3px solid var(--orange-900);
     background-color: var(--secondary-color);
+    color: var(--orange-900);
     border-radius: .5rem;
+    font-size: 1.1rem;
 }
 
-.category-1{
+.explore-btn:hover {
+    background-color: var(--orange-900);
+    border: 3px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.category-1 {
     font-size: 1rem;
-    padding: 5px .5rem;
+    padding: 7px .6rem;
     border-radius: 2rem;
     color: var(--primary-color);
     border: 2px solid var(--orange-900);

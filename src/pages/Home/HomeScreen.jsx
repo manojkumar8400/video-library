@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./HomeScreen.css";
 
 export const Home = () => {
@@ -7,7 +8,9 @@ export const Home = () => {
         <main className='home-container grid-center'>
             <div className='text-align'>
                 <h2>Welcome to ViewTube</h2>
-                <button className='explore-btn fs-16 m-tb-32'>Explore</button>
+                <Link to="/explore">
+                    <button className='explore-btn fs-16 m-tb-32'>Explore</button>
+                </Link>
                 <section className='flex gap-16'>
                     <button className="category-1">All</button>
                     <button className="category-1">Book Summary</button>

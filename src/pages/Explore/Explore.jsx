@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import "./Explore.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../../app/slice/dataSlice';
-import { Loader, VIdeoCard } from '../../components/index';
+import { Loader, VideoCard } from '../../components/index';
 
 export const Explore = () => {
 
@@ -27,7 +27,7 @@ export const Explore = () => {
                             <div className='item-container grid gap-16'>
                                 {
                                     videos.map((video) =>
-                                        <VIdeoCard video={video} key={video._id} />
+                                        <VideoCard video={video} key={video._id} />
                                     )
                                 }
                             </div>

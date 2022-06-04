@@ -45,9 +45,3 @@
     padding: 1.6px;
     cursor: grab;
 }
-
-.signin-btn {
-    padding: 6px 1rem;
-    border-radius: .5rem;
-    border: 3px solid var(--secondary-color);
-}

@@ -1,0 +1,64 @@
+.signin-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.signin-img {
+    width: 130%;
+    height: 90vh;
+}
+
+.signin-card {
+    border: 3px solid var(--secondary-color);
+    border-radius: .7rem;
+}
+
+.input-label {
+    font-size: .9rem;
+    width: 18rem;
+}
+
+.input-text {
+    font-size: .9rem;
+    padding: 5px 8px;
+}
+
+.input-password {
+    font-size: .9rem;
+    padding: 5px 1.6rem 5px 8px;
+}
+
+.input-password:focus,
+.input-text:focus {
+    outline: none;
+}
+
+.visibility-off {
+    padding: 4px 3px;
+    right: 2px;
+    top: 1.2rem;
+    background-color: var(--primary-color);
+}
+
+.checkbox-label {
+    font-size: .9rem;
+}
+
+.checkbox-input {
+    margin-right: 5px;
+}
+
+.forget-password {
+    font-size: .8rem;
+    color: var(--blue-900);
+}
+
+.signin {
+    padding: 5px;
+    width: 18rem;
+}
+
+.fs {
+    font-size: .8rem;
+    color: var(--blue-900);
+    width: fit-content;
+}

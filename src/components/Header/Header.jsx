@@ -27,7 +27,9 @@ export const Header = () => {
                 </section>
             </section>
             <section className="flex justify-center">
-                <button className='signin-btn bg-transparent fs-16'>Sign in</button>
+                <Link to="/signin" className='signin-btn bg-transparent'>
+                    <span class="material-icons  fs-32">person</span>
+                </Link>
             </section>
         </header>
     )
