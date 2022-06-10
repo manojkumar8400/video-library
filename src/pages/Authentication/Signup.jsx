@@ -5,7 +5,7 @@ import "./Auth.css";
 export const Signup = () => {
 
     return (
-        <form className='signin-container grid gap-16'>
+        <main className='signin-container grid gap-16'>
             <section>
                 <img className='signin-img' src="./assets/Sign-in.svg" alt="Sign in" />
             </section>
@@ -45,6 +45,6 @@ export const Signup = () => {
                     </section>
                 </div>
             </section>
-        </form>
+        </main>
     )
 }

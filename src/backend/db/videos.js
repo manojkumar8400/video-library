@@ -11,6 +11,17 @@ export const videos = [
     description: "दिमाग का काम है सोचना. दिल का काम है खून को पंप करना. पेट और आंतों का खाने को पचाना. लेकिन लिवर का काम क्या है? लिवर दरअसल ऑफिस के उस कर्मचारी जैसा है जिसके बारे में कोई ठीक से नहीं जानता कि वो करता क्या है ",
   },
   {
+    _id: "qkxuFKqJXWY",
+    title: "Roommate - Stand Up Comedy Ft. Anubhav Singh Bassi",
+    views: "50M",
+    creator: "Anubhav Singh Bassi",
+    subscribers: "3.59M",
+    releaseTime: "1 Year ago",
+    genre: "Stand Up",
+    logoURL: "https://yt3.ggpht.com/ytc/AKedOLS7IEPwzVpf3MOKIBHsLlIIG_UTH7CKO2iKYNxw4A=s88-c-k-c0x00ffffff-no-rj",
+    description: "MY FOURTH STAND UP VIDEO IS HERE! DO WRITE YOUR ROOMMATE EXPERIENCES IN COMMENTS AND SHARE WITH YOUR FRIENDS.",
+  },
+  {
     _id: "FwxSm6EdJUU",
     title: "9 Majedaar Futuristic Smartphone Tech !",
     views: "1M",
@@ -55,6 +66,17 @@ export const videos = [
     description: "5 Crazy Free Android Apps  useful apps 2022 : is video mein mene students gamers gaming ke liye aur kuch useful android apps bataye hai"
   },
   {
+    _id: "AU4Nct1lEVU",
+    title: "Kanpur & River Ganga - Stand Up Comedy by Harsh Gujral",
+    views: "17M",
+    creator: "Harsh gujral",
+    subscribers: "1.52M",
+    releaseTime: "2 Year ago",
+    genre: "Stand Up",
+    logoURL: "https://yt3.ggpht.com/ytc/AKedOLTuDOpO2Vc50eR-mu8HjPzDXwnZkqUW_ZDCoQQGCg=s88-c-k-c0x00ffffff-no-rj",
+    description: "MY THIRD STAND UP COMEDY VIDEO IS HERE! Every Group has a Kanpuriya friend tag your Kanpuriya friends! ",
+  },
+  {
     _id: "aWM3i-ISleo",
     title: "शहर में जंगल को साकार करती इमारतें [Tiny forests in the city - A cool idea!]",
     views: "600K",
@@ -67,17 +89,6 @@ export const videos = [
 
   },
   {
-    _id: "QX3iigjsqoA",
-    title: "700 Bugs निकालने वाले इस Hacker की कहानी 👨‍💻🤑 | Ankit Singh | Josh Talks Hindi",
-    views: "24K",
-    creator: "जोश Talks",
-    subscribers: "7.4M",
-    releaseTime: "5 months ago",
-    genre: "जोश Talks",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLRByBdniuSdNa97O-CRq9fv1xUm6ZKmpqcmrFZSkQ=s88-c-k-c0x00ffffff-no-rj",
-    description: "ज़िन्दगी सिर्फ एक है! क्या आप करना चाहते है कुछ बड़ा? अपने जोश स्पीकर 'अंकित सिंह जी' से बात करे, जहाँ वो आप में से कुछ चुनिंदा लोगों के सवालों के जवाब देंगे और बाकी आप सभी लोग उनके जवाबों को सुन सकेंगे,"
-  },
-  {
     _id: "OzQmbyaidbY",
     title: "7 Majedaar Gadgets I Bought Online !",
     views: "3.7M",
@@ -87,6 +98,28 @@ export const videos = [
     genre: "tech video",
     logoURL: "https://yt3.ggpht.com/ytc/AKedOLSLzBlLalLFEXgvGHr6f9yBm9Y8PrJMXZC_hxTTlQ=s88-c-k-c0x00ffffff-no-rj",
     description: "Mast Gadgets try kare jaa rahe hain doston!"
+  },
+  {
+    _id: "LfgJWr-SGxQ",
+    title: "Sundeep Sharma Stand-up -Father Knows Better",
+    views: "18M",
+    creator: "Sundeep Sharma",
+    subscribers: "1.52M",
+    releaseTime: "3 Year ago",
+    genre: "Stand Up",
+    logoURL: "https://yt3.ggpht.com/sv9ORleTASeGsaplJd5xkgQViEk5BdmkyiWZfR0NKXRASqbcVbnJ0DDms1kBqLS5X-ZGeuW0=s88-c-k-c0x00ffffff-no-rj",
+    description: "This video is my tribute to my late father Shri Hariom Sharma, an honest and upright farmer who sold tea outside his school to pay for his school fee and went on to pursue post graduation and got ",
+  },
+  {
+    _id: "eKqY-oP1d_Y",
+    title: "How to Start Coding? Learn Programming for Beginners",
+    views: "1.3M",
+    creator: "Apna College",
+    subscribers: "1.76M",
+    releaseTime: "6 months ago",
+    genre: "programming",
+    logoURL: "https://yt3.ggpht.com/O12gYmCwBASezJpxddXOj1PEirMgxCGX2gOiJ3plomaK4E0K1hr_iobbQEWz1e4QVMflTmug=s88-c-k-c0x00ffffff-no-rj",
+    description: "🔥Java Placement Course : https://www.youtube.com/watch?v=yRpLl...🔥Complete C++ Placement Course (Data Structures+Algorithm) :"
   },
   {
     _id: "jN6BJpW7QZ4",
@@ -101,17 +134,6 @@ export const videos = [
 
   },
   {
-    _id: "A45Zg8YXC8M",
-    title: "जानो बड़ा Business बनाने का सबसे ज़रूरी नियम 🤨| Ashneer Grover | Josh Talks Hindi",
-    views: "2.7M",
-    creator: "जोश Talks",
-    subscribers: "7.4M",
-    releaseTime: "6 months ago",
-    genre: "जोश Talks",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLRByBdniuSdNa97O-CRq9fv1xUm6ZKmpqcmrFZSkQ=s88-c-k-c0x00ffffff-no-rj",
-    description: "हमारे आज के speaker है Entrepreneurship के क्षेत्र में अपनी अलग पहचान रखने वाले BharatPe के Founder & Managing Director Ashneer Grover जी; जिनकी कहानी लक्ष्य को पाने के लिए की जाने वाली असीमित मेहनत,लगन और जुनून का जीता जागता उत्तम उदाहरण है। "
-  },
-  {
     _id: "B4n6s-onn-4",
     title: "मानव बन रहा है दानव, खुद देखिए [Wildlife trafficking in Peru]",
     views: "10M",
@@ -124,26 +146,15 @@ export const videos = [
 
   },
   {
-    _id: "WV2Vr7zaM3w",
-    title: "करोड़ों का Business इस Entrepreneur Motivation, Skills से बनेगा🤑 | Dilkhush Kumar | Josh Talks Hindi",
-    views: "6M",
-    creator: "जोश Talks",
-    subscribers: "7.4M",
-    releaseTime: "9 months ago",
-    genre: "जोश Talks",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLRByBdniuSdNa97O-CRq9fv1xUm6ZKmpqcmrFZSkQ=s88-c-k-c0x00ffffff-no-rj",
-    description: "अपना नेटवर्क बनाने और समुदाय से ज्ञान प्राप्त करने के लिए GAME के Facebook समूह Entrepreneurs Network में शामिल हों।"
-  },
-  {
-    _id: "efWxaA5R6A4",
-    title: "The Mastery Manual by Robin Sharma Audiobook | Book Summary in Hindi",
-    views: "62K",
-    creator: "Readers Book Club",
-    subscribers: "1.32M",
-    releaseTime: "1 months ago",
-    genre: "book summary",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLTaD4995he8CQYqjhqN9tnT339rvEoPS-23SDq_tg=s88-c-k-c0x00ffffff-no-rj",
-    description: "Download Kuku FM - https://kukufm.sng.link/Apksi/5ayr/ia6d 50% discount for 1st 250 Users - Use Coupon Code RBC50"
+    _id: "z12bz7adLKI",
+    title: "Waxing - Stand Up Comedy ft. Anubhav Singh Bassi",
+    views: "40M",
+    creator: "Anubhav Singh Bassi",
+    subscribers: "3.59M",
+    releaseTime: "3 Year ago",
+    genre: "Stand Up",
+    logoURL: "https://yt3.ggpht.com/ytc/AKedOLS7IEPwzVpf3MOKIBHsLlIIG_UTH7CKO2iKYNxw4A=s88-c-k-c0x00ffffff-no-rj",
+    description: "MY SECOND STAND UP VIDEO IS HERE! DO WRITE YOUR EXPERIENCES OF 'BEING STRONG' IN COMMENTS.",
   },
   {
     _id: "w7ejDZ8SWv8",
@@ -157,39 +168,6 @@ export const videos = [
     description: "Get started with React in this crash course. We will be building a task tracker app and look at components, props, state, hooks, working with an API and more."
   },
   {
-    _id: "pLQfNfrAd5Y",
-    title: "5 Ways to Be a Dangerously Powerful Man! खतरनाक ताकतवर आदमी बनना सीखो | Yebook",
-    views: "218K",
-    creator: "yebook",
-    subscribers: "3.51M",
-    releaseTime: "1 month ago",
-    genre: "book summary",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLR0eK4VnxLn62ckwe3vENIXKtNmV1LZnWTbeTN4=s88-c-k-c0x00ffffff-no-rj",
-    description: "Jordan Peterson kehte hain ki ek achha insaan harmless nahi hota balki ek achha insaan wo hota hai jo bohot dangerous ho lekin wo kisi ko nuksaan na pahunchana choose kare. "
-  },
-  {
-    _id: "DTkuwMSpP20",
-    title: "BRAIN RULES Book Summary in Hindi by John Medina | 12 Brain Rules That Will Change Your Life",
-    views: "6M",
-    creator: "Rewirs",
-    subscribers: "1.16M",
-    releaseTime: "2 years ago",
-    genre: "book summary",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLS6b6sr0NdZxNuD5ZPPNtZzPWo1HX7Ie8JK0FZyjw=s88-c-k-c0x00ffffff-no-rj",
-    description: "In this video we will summaries the book Brain Rules which share how our brain science works and influence the we think or teach children or adults."
-  },
-  {
-    _id: "_otuQsbVIjc",
-    title: "Was Karna the cause of Mahabharata? | Karna accepts his defeat",
-    views: "395K",
-    creator: "Spiritual Enigma",
-    subscribers: "17.8K",
-    releaseTime: "1 years ago",
-    genre: "Krishna",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLQ8bnIoW5cMfTGd_l03UdE4M2xplZSCstEnylzY=s88-c-k-c0x00ffffff-no-rj",
-    description: "Hare Krishna, Do you think Karna had not supported Duryodhana this DHARMYUDH would not have happened? Watch the entire video to find out!!!"
-  },
-  {
     _id: "5-V0-y1iP3Q",
     title: "React Native vs Flutter | Which one should you Learn in 2022 ?",
     views: "103K",
@@ -201,25 +179,14 @@ export const videos = [
     description: "Hare Krishna, Do you think Karna had not supported Duryodhana this DHARMYUDH would not have happened? Watch the entire video to find out!!!"
   },
   {
-    _id: "JJ0O5sgFqx0",
-    title: "Mindset by Carol Dweck Audiobook | Book Summary in Hindi",
-    views: "1.2M",
-    creator: "Readers Book Club",
-    subscribers: "1.32M",
-    releaseTime: "2 years ago",
-    genre: "book summary",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLTaD4995he8CQYqjhqN9tnT339rvEoPS-23SDq_tg=s88-c-k-c0x00ffffff-no-rj",
-    description: "This book is Mindset written by Carol Dweck Audiobook. Its a Book Summary in Hindi with Animated Book Review. Learn about Business, Parenting, School& Relationship."
-  },
-  {
-    _id: "57opnXZ8OJQ",
-    title: "Who am I By Lord Krishna Revealed in Bhagvad Gita in Hindi",
-    views: "199K",
-    creator: "BRIGHT KNOWLEDGE",
-    subscribers: "25K",
-    releaseTime: "4 years ago",
-    genre: "Krishna",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLTEweqZbmChmw9C-tnlpklqiXZFnK5l4XIw20ak=s88-c-k-c0x00ffffff-no-rj",
-    description: "Hare Krishna, Do you think Karna had not supported Duryodhana this DHARMYUDH would not have happened? Watch the entire video to find out!!!"
+    _id: "OCkbJNcddD8",
+    title: "Tum Husn Pari | Zakir Khan | Stand Up-Comedy | Sukha Poori 2",
+    views: "18M",
+    creator: "Zakir Khan",
+    subscribers: "7.04M",
+    releaseTime: "2 Year ago",
+    genre: "Stand Up",
+    logoURL: "https://yt3.ggpht.com/ytc/AKedOLQ-IPFEzpiA0AqSSeK7ZiBWUfrG4a3OZar2p3tXNQ=s88-c-k-c0x00ffffff-no-rj",
+    description: "MY THIRD STAND UP VIDEO IS HERE! DO WRITE YOUR EXPERIENCES OF 'BEING STRONG' IN COMMENTS.",
   },
 ];

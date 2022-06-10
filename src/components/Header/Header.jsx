@@ -10,13 +10,13 @@ export const Header = () => {
     const { toggle } = useSelector((state) => state.operator);
 
     return (
-        <header className='header-bar grid sticky p-16 z-index-1'>
-            <section className="flex justify-center gap-32">
+        <header className='header-bar flex sticky p-16 z-index-1'>
+            <section className="a flex gap-32">
                 <button onClick={() => dispatch(sideToggle(toggle ? false : true))} className="bg-transparent c-pointer b-none"><span className='material-icons fs-24 '>menu</span></button>
                 <Link to="/">
                     <section className='flex justify-center'>
                         <img className='vl-logo' src="/favicon.png" alt="logo-img" />
-                        <h2><span className='view-txt'>View</span><span className='tube-txt'>Tube</span></h2><sub>IN</sub>
+                        <h2><span className='view-txt'>View</span><span className='tube-txt'>Tube</span></h2><sup className='superscript-txt'>IN</sup>
                     </section>
                 </Link>
             </section>
@@ -27,8 +27,8 @@ export const Header = () => {
                 </section>
             </section>
             <section className="flex justify-center">
-                <Link to="/signin" className='signin-btn bg-transparent'>
-                    <span class="material-icons  fs-32">person</span>
+                <Link to="/login" className='signin-btn bg-transparent'>
+                    <span className="material-icons  fs-32">person</span>
                 </Link>
             </section>
         </header>

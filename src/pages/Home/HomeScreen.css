@@ -1,6 +1,6 @@
 .routes-container {
     display: grid;
-    grid-template-columns: 14rem 1fr;
+    grid-template-columns: 12rem 1fr;
 }
 
 .home-container {
@@ -33,4 +33,12 @@
     color: var(--primary-color);
     border: 2px solid var(--orange-900);
     background-color: transparent;
+}
+
+.category{
+    padding: .5rem 1rem;
+    background-color: inherit;
+    color: var(--orange-900);
+    border-radius: .5rem;
+    border: 2px solid;
 }

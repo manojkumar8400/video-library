@@ -4,13 +4,18 @@
     background-color: var(--gray-100);
 }
 
-.sidebar-icon {
+#sidebar-icon {
     display: flex;
     align-items: center;
     padding: 1rem;
     cursor: pointer;
 }
 
-.sidebar-icon:hover {
-    background-color: var(--gray-200);
+#sidebar-icon:hover {
+    color: var(--orange-900);
+}
+
+.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }

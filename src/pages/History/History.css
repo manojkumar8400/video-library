@@ -1,0 +1,27 @@
+.delete-all-history {
+    margin-top: .5rem;
+    margin: 1rem 2rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear-history-btn {
+    padding: 5px .5rem;
+    font-size: 1rem;
+    border-color: var(--secondary-color);
+    border-radius: .5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+
+}
+
+.delete-icon {
+    position: absolute;
+    font-size: 1.3rem;
+    right: 0%;
+    bottom: 19%;
+    border: none;
+    background-color: inherit;
+}

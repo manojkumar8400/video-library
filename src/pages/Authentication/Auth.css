@@ -62,3 +62,35 @@
     color: var(--blue-900);
     width: fit-content;
 }
+
+
+.logout-main-container{
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+.logout-container{
+    border: 2px solid var(--secondary-color);
+    border-radius: .5rem;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    height: 12rem;
+    margin-top: 2rem;
+}
+.avatar-section{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.avatar{
+    border: 1px solid;
+    width: fit-content;
+    padding: 1.2rem .8rem;
+    border-radius: 50%;
+}
+.logout-btn{
+    padding: 5px 0;
+}
