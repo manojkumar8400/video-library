@@ -1,0 +1,31 @@
+.playlist {
+    display: grid;
+
+}
+
+.playlist-section {
+    background-color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 2px 2px 2px black, 2px 2px 2px red;
+}
+
+.playlist-container {
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+}
+
+.input-section input {
+    padding: 5px .6rem;
+}
+
+.input-section button{
+    padding: 5px .6rem;
+    margin-left: 1rem;
+}
