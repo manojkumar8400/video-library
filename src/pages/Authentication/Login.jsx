@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { loginGuest, loginHandler } from '../../app/slice/authSlice';
+import { loginGuest } from '../../app/slice/authSlice';
 import "./Auth.css";
 
 export const Login = () => {
@@ -45,7 +45,7 @@ export const Login = () => {
                     <section className='grid gap-8'>
                         <button className='signin'>Login</button>
 
-                        <button onClick={() =>{ dispatch(loginGuest()); dispatch(loginHandler()); navigate(location.state.from.pathname);}} className='signin'>Signin as a guest</button>
+                        <button onClick={() =>{ dispatch(loginGuest()); navigate(location.state.from.pathname);}} className='signin'>Signin as a guest</button>
 
                         <Link to="/signup" className='fs text-align m-auto'>Go for SignUp</Link>
                     </section>
