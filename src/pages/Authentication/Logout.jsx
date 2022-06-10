@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { logoutHandler } from '../../app/slice/authSlice';
 
 export const Logout = () => {
 
     const dispatch = useDispatch();
+    const [backBtn, setBackBtn] = useState(false)
 
     return (
         <main className='logout-main-container'>
@@ -16,8 +18,15 @@ export const Logout = () => {
                         <p>manojkumar@gmail.com</p>
                     </span>
                 </section>
-                <button onClick={_ => {dispatch(logoutHandler()) }} className='logout-btn'>Logout</button>
+                <button onClick={_ => { dispatch(logoutHandler()); setBackBtn(true) }} className='logout-btn'>Logout</button>
             </div>
-        </main>
+            {
+                backBtn && <div className='home-btn'>
+                    <Link to="/">
+                        <h3>Back To Home Page</h3>
+                    </Link>
+                </div>
+            }
+        </main >
     )
 }

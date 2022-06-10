@@ -1,51 +1,51 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const initialState = {
     status: true,
-    auth: {
-        authToken: localStorage.getItem("authToken") || null,
-        user: localStorage.getItem("user") || null
-    },
-    loginStatus: true,
+    authToken: localStorage.getItem("authToken") || null,
+    user: localStorage.getItem("user") || null,
+    loginStatus: false,
 }
 
 export const loginGuest = createAsyncThunk("auth/loginGuest", async () => {
+    console.log("log...");
     try {
         const res = await axios.post("/api/auth/login", {
             email: "manojkumar@gmail.com",
             password: "manoj@123",
         });
+        localStorage.setItem("authToken", res.data.encodedToken);
+        localStorage.setItem("user", res.data.foundUser.firstName);
         return res;
     } catch (error) {
         console.log(error.message);
     }
 })
+
 const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        loginHandler: (state, { payload }) => {
-            state.loginStatus = true;
-            // localStorage.setItem("loginStatus",true)
-        },
-
         logoutHandler: (state, { payload }) => {
             localStorage.removeItem("authToken");
             localStorage.removeItem("user");
-            state.loginStatus = false
+            state.loginStatus = false;
+            toast.info("Successfully logout")
         }
     },
+
     extraReducers: {
         [loginGuest.pending]: (state) => {
             state.status = true;
         },
         [loginGuest.fulfilled]: (state, { payload }) => {
             state.status = false;
-            localStorage.setItem("authToken", payload.data.encodedToken);
-            localStorage.setItem("user", payload.data.foundUser.firstName);
-            state.auth.authToken = payload.data.encodedToken;
-            state.auth.user = payload.data.foundUser.firstName;
+            state.loginStatus = true;
+            state.authToken = payload.data.encodedToken;
+            state.user = payload.data.foundUser.firstName;
+            toast.success(`Welcome back ${state.user}`)
         },
         [loginGuest.rejected]: (state) => {
             state.status = false;
@@ -53,6 +53,6 @@ const authSlice = createSlice({
     }
 })
 
-export const { loginHandler, logoutHandler } = authSlice.actions
+export const { logoutHandler } = authSlice.actions
 
 export default authSlice.reducer;
