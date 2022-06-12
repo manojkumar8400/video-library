@@ -3,25 +3,17 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const initialState = {
-    status: true,
-    checkGener: "",
-    getLikeData: [],
-    watchlaterData: [],
-    historyData: []
-}
-
 export const likePost = createAsyncThunk("features/likePost", async (video) => {
     try {
         const res = await axios.post("/api/user/likes", {
             video: video
         },
-            {
-                headers: {
+        {
+            headers: {
                     "authorization": localStorage.getItem("authToken")
                 }
             }
-        );
+            );
 
     } catch (error) {
         console.log(error);
@@ -174,10 +166,25 @@ export const historyRemoveAll = createAsyncThunk("features/historyRemoveAll", as
     }
 })
 
+
+const initialState = {
+    status: true,
+    checkGener: "",
+    getLikeData: [],
+    watchlaterData: [],
+    historyData: [],
+    filterValue:"All"
+}
+
 const featureSlice = createSlice({
     name: "features",
     initialState,
-    reducers: { },
+    reducers: { 
+        filterCat: (state, {payload}) => {
+            state.filterValue = payload;
+        }
+    },
+
     extraReducers: {
 
         //      Like Post  Request
@@ -319,4 +326,5 @@ const featureSlice = createSlice({
     }
 })
 
+export const { filterCat } = featureSlice.actions;
 export default featureSlice.reducer;

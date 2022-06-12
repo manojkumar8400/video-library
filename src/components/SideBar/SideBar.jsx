@@ -22,7 +22,7 @@ export const SideBar = () => {
                 </NavLink>
             </section>
             <section>
-                <NavLink to="/" id='sidebar-icon' className={({ isActive }) => (isActive ? "active" : undefined)}>
+                <NavLink to="playlist" id='sidebar-icon' className={({ isActive }) => (isActive ? "active" : undefined)}>
                     <span className="material-icons mr-8 fs-32">playlist_add</span>
                     <h4>Playlist</h4>
                 </NavLink>

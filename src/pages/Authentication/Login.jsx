@@ -45,7 +45,7 @@ export const Login = () => {
                     <section className='grid gap-8'>
                         <button className='signin'>Login</button>
 
-                        <button onClick={() =>{ dispatch(loginGuest()); navigate(location.state.from.pathname);}} className='signin'>Signin as a guest</button>
+                        <button onClick={() =>{ dispatch(loginGuest()); navigate(location.state.from.pathname)}} className='signin'>Signin as a guest</button>
 
                         <Link to="/signup" className='fs text-align m-auto'>Go for SignUp</Link>
                     </section>

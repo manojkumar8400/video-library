@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchData } from '../../app/slice/dataSlice';
@@ -18,12 +18,14 @@ export const SingleVideo = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
+    const [videoData, setVideoData] = useState();
+
     useEffect(_ => {
         dispatch(fetchData())
     }, [dispatch])
 
     return (
-        <main className='single-video-container'>
+        <main className='single-video-container grid gap-16'>
             {
                 status ?
                     (< Loader />) :
@@ -36,7 +38,7 @@ export const SingleVideo = () => {
                                         return (
                                             <section className='single-video-section' key={video._id}>
                                                 <p className='data-title'>{video.title}</p>
-                                                <section className='view-old-section'>
+                                                <section className='view-section flex justify-between gap-16'>
                                                     <section>
                                                         <span className='video-view'>{video.views} views</span>
                                                         <span>{video.howOld}</span>
@@ -57,19 +59,14 @@ export const SingleVideo = () => {
                                                                 <section onClick={_ => { loginStatus ? dispatch(watchLaterPost(video)) : navigate("/login") }} className='s c-pointer'><span className="material-icons like-btn-icon">watch_later</span></section>
                                                             )
                                                         }
-                                                        <section onClick={_=> dispatch(playlistModal(true))} className='s c-pointer'><span className="material-icons like-btn-icon">playlist_play</span></section>
+                                                        <section onClick={_ => { dispatch(playlistModal(true)); setVideoData(video) }} className='s c-pointer'><span className="material-icons like-btn-icon">playlist_play</span></section>
                                                     </section>
                                                 </section>
                                                 <section className='subscriber-section'>
                                                     <img className='channel-logo' src={video.logoURL} alt="channel logo" />
-                                                    <section className='channel-name-btn'>
-                                                        <span>
-                                                            <h4>{video.creator}</h4>
-                                                            <small>{video.subscribers} subscribers</small>
-                                                        </span>
-                                                        <span>
-                                                            <button className='subscribe-btn'>SUBSCRIBE</button>
-                                                        </span>
+                                                    <section>
+                                                        <h4>{video.creator}</h4>
+                                                        <small>{video.subscribers} subscribers</small>
                                                     </section>
                                                 </section>
                                                 <p className='description'>{video.description}</p>
@@ -81,7 +78,7 @@ export const SingleVideo = () => {
                         </section>
                         {
                             showPlaylistModel ?
-                                < PlaylistModal />
+                                < PlaylistModal video={videoData} />
                                 : undefined
                         }
                     </>

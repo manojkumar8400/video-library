@@ -20,7 +20,7 @@ export const History = () => {
                     <Loader /> :
                     historyData.length ?
                         <>
-                            <section className="delete-all-history">
+                            <section className="delete-all-history flex justify-between m-t-8">
                                 <span className='delete-txt'>Watch History</span>
                                 <button onClick={_ => dispatch(historyRemoveAll())}className=" clear-history-btn">
                                     clear history

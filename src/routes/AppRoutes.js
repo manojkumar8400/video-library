@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { Header, SideBar } from '../components/index';
-import { Error, Explore, History, Home, Likes, Login, Logout, Signup, SingleVideo, WatchLater } from '../pages/index';
+import { Error, Explore, History, Home, Likes, Login, Logout, PlayList, PlayListVideos, Signup, SingleVideo, WatchLater } from '../pages/index';
 import { RequireAuth } from './RequireAuth';
 
 export const AppRoutes = () => {
@@ -24,6 +24,8 @@ export const AppRoutes = () => {
                         <Route path='/like' element={< Likes />} />
                         <Route path="/history" element={< History />} />
                         <Route path='/watchlater' element={< WatchLater />} />
+                        <Route path="/playlist" element={< PlayList />} />
+                        <Route path="/playlist/:playlistId" element={ < PlayListVideos />} />
                     </Route>
 
                     <Route path="/login" element={< Login />} />

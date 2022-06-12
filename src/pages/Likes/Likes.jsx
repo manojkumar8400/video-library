@@ -18,7 +18,7 @@ export const Likes = () => {
             {
                 status ?
                     (<Loader />) : getLikeData.length ?
-                        <section className='likedata'>
+                        <section className='likedata grid gap-16'>
                             {
                                 getLikeData.map((likeVideo) =>
                                     <div key={likeVideo._id} className="relative">

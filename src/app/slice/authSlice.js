@@ -10,7 +10,6 @@ const initialState = {
 }
 
 export const loginGuest = createAsyncThunk("auth/loginGuest", async () => {
-    console.log("log...");
     try {
         const res = await axios.post("/api/auth/login", {
             email: "manojkumar@gmail.com",
@@ -18,6 +17,7 @@ export const loginGuest = createAsyncThunk("auth/loginGuest", async () => {
         });
         localStorage.setItem("authToken", res.data.encodedToken);
         localStorage.setItem("user", res.data.foundUser.firstName);
+        localStorage.setItem("loginStatus", true);
         return res;
     } catch (error) {
         console.log(error.message);
@@ -32,6 +32,7 @@ const authSlice = createSlice({
             localStorage.removeItem("authToken");
             localStorage.removeItem("user");
             state.loginStatus = false;
+            localStorage.setItem("loginStatus", false);
             toast.info("Successfully logout")
         }
     },
@@ -42,9 +43,9 @@ const authSlice = createSlice({
         },
         [loginGuest.fulfilled]: (state, { payload }) => {
             state.status = false;
-            state.loginStatus = true;
             state.authToken = payload.data.encodedToken;
             state.user = payload.data.foundUser.firstName;
+            state.loginStatus = localStorage.getItem("loginStatus");
             toast.success(`Welcome back ${state.user}`)
         },
         [loginGuest.rejected]: (state) => {

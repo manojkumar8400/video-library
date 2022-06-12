@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logoutHandler } from '../../app/slice/authSlice';
 
 export const Logout = () => {
 
     const dispatch = useDispatch();
+    const { status } = useSelector(store=>store.auth);
     const [backBtn, setBackBtn] = useState(false)
 
     return (
