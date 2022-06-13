@@ -1,3 +1,5 @@
+export { PlayListVideos } from "./PlayList/PlayListVideos";
+export { PlayList } from "./PlayList/PlayList";
 export { Logout } from "./Authentication/Logout";
 export { History } from "./History/History";
 export { Likes } from "./Likes/Likes";

@@ -20,6 +20,9 @@
     font-size: 1.1rem;
 }
 
+.font{
+    font-family: 'Libre Baskerville', serif;
+}
 .explore-btn:hover {
     background-color: var(--orange-900);
     border: 3px solid var(--secondary-color);

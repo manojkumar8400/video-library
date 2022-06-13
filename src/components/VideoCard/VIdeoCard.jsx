@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import "./VideoCard.css";
 import { addFeatures, playlistModal } from '../../app/slice/operatorSlice';
@@ -16,7 +16,6 @@ export const VideoCard = ({ video }) => {
     const { watchlaterData } = useSelector(store => store.features)
     const { loginStatus } = useSelector(store => store.auth);
 
-    // const [modal, setModal] = useState(false);
 
     return (
         <main className='item-section c-pointer relative' key={video._id}>
@@ -36,7 +35,7 @@ export const VideoCard = ({ video }) => {
                     </section>
                 </section>
             </Link>
-            <span onClick={_ => { dispatch(addFeatures(video._id)), setAddModel(addModel ? false : true) }} className='material-icons more-feature-icon-model absolute'>more_vert</span>
+            <span onClick={_ => { dispatch(addFeatures(video._id)); setAddModel(addModel ? false : true) }} className='material-icons more-feature-icon-model absolute'>more_vert</span>
 
             {
                 video._id === addfeaturesIcon && addModel ?
@@ -58,7 +57,7 @@ export const VideoCard = ({ video }) => {
             }
             {
                 showPlaylistModel ?
-                    < PlaylistModal /> :
+                    < PlaylistModal video={video} /> :
                     undefined
             }
         </main>

@@ -16,7 +16,7 @@ export const WatchLater = () => {
         <div>
             {
                 status ?
-                    (<Loader />) : watchlaterData.length ?
+                    (<Loader />) : watchlaterData !== undefined ?  watchlaterData.length ?
                         <section className='likedata'>
                             {
                                 watchlaterData.map((watchlaterVideo) =>
@@ -27,8 +27,8 @@ export const WatchLater = () => {
                                 )
                             }
                         </section>
-                        :
-                        <h3 className='text-align m-tb-8'> There is no video</h3>
+                        : <h3 className='text-align m-tb-8'> There is no video</h3> 
+                        : <h3 className='text-align m-tb-8'> There is no video</h3>
             }
         </div>
     )

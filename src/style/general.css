@@ -111,6 +111,14 @@
 .m-auto{
     margin: auto;
 }
+
+.m-16{
+    margin: 1rem;
+}
+
+.m-t-8{
+    margin-top: .5rem;
+}
 .m-tb-8 {
     margin: .5rem 0;
 }

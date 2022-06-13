@@ -1,8 +1,5 @@
 .delete-all-history {
-    margin-top: .5rem;
     margin: 1rem 2rem 0 2rem;
-    display: flex;
-    justify-content: space-between;
 }
 
 .clear-history-btn {

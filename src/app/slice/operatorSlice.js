@@ -17,7 +17,7 @@ const operatorSlice = createSlice({
             state.addfeaturesIcon = action.payload;
         },
 
-        playlistModal: (state, {payload}) => {
+        playlistModal: (state, { payload }) => {
             state.showPlaylistModel = payload;
         }
     }

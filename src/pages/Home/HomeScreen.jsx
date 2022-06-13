@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchData } from '../../app/slice/dataSlice';
+import { filterCat } from '../../app/slice/featureSlice';
 import "./HomeScreen.css";
 
 export const Home = () => {
@@ -18,13 +19,13 @@ export const Home = () => {
     return (
         <main className='home-container grid-center'>
             <div className='text-align'>
-                <h2>Welcome to ViewTube</h2>
+                <h2 className='font'>Welcome to ViewTube</h2>
                 <Link to="explore">
                     <button className='explore-btn fs-16 m-tb-32'>Explore</button>
                 </Link>
                 <Link to="explore">
                     <section className='flex gap-16 '>
-                        {filterCategory.map(item => <button key={item} className="category">{item}</button>)}
+                        {filterCategory.map(item => <button onClick={_ => dispatch(filterCat(item))} key={item} className="category">{item}</button>)}
                     </section>
                 </Link>
             </div>
