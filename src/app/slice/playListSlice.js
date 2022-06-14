@@ -125,6 +125,7 @@ const playListSlice = createSlice({
             state.status = true;
         },
         [deletePlayList.fulfilled]: (state, { payload }) => {
+            state.status = false;
             state.playLists = payload;
         },
         [deletePlayList.rejected]: (state) => {

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import "./PlaylistModal.css";
 import { playlistModal } from '../../app/slice/operatorSlice';
 import { getPlayLists, postNewPlaylist, PostVideo } from '../../app/slice/playListSlice';
-import "./PlaylistModal.css";
-
 
 export const PlaylistModal = ({ video }) => {
 
@@ -21,7 +20,7 @@ export const PlaylistModal = ({ video }) => {
     const addVideo = (playListId) => {
         dispatch(playlistModal(false));
         dispatch(PostVideo({ playListId, video }));
-    }
+    };
 
     return (
         <main className='playlist-container'>

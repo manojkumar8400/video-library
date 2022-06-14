@@ -26,7 +26,7 @@ export const History = () => {
                                     clear history
                                 </button>
                             </section>
-                            <section className='likedata'>
+                            <section className='likedata grid gap-16'>
                                 {
                                     historyData.map((historyVideo) =>
                                         <div key={historyVideo._id} className="relative">

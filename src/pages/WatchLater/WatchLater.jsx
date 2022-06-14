@@ -17,7 +17,7 @@ export const WatchLater = () => {
             {
                 status ?
                     (<Loader />) : watchlaterData !== undefined ?  watchlaterData.length ?
-                        <section className='likedata'>
+                        <section className='likedata grid gap-16'>
                             {
                                 watchlaterData.map((watchlaterVideo) =>
                                     <div key={watchlaterVideo._id} className="relative">

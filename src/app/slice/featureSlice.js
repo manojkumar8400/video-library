@@ -173,7 +173,8 @@ const initialState = {
     getLikeData: [],
     watchlaterData: [],
     historyData: [],
-    filterValue:"All"
+    filterValue:"All",
+    searchValue: ""
 }
 
 const featureSlice = createSlice({
@@ -182,6 +183,10 @@ const featureSlice = createSlice({
     reducers: { 
         filterCat: (state, {payload}) => {
             state.filterValue = payload;
+        },
+
+        searchItem: (state, {payload}) => {
+            state.searchValue = payload;
         }
     },
 
@@ -326,5 +331,5 @@ const featureSlice = createSlice({
     }
 })
 
-export const { filterCat } = featureSlice.actions;
+export const { filterCat, searchItem } = featureSlice.actions;
 export default featureSlice.reducer;
