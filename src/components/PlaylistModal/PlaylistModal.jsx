@@ -27,19 +27,21 @@ export const PlaylistModal = ({ video }) => {
             <section className='playlist-section'>
                 <section className='flex justify-between m-tb-8'>
                     <h3>Create Playlist</h3>
-                    <span onClick={_ => dispatch(playlistModal(false))} class='material-icons c-pointer'>close</span>
+                    <span onClick={_ => dispatch(playlistModal(false))} className='material-icons c-pointer'>close</span>
                 </section>
                 <section className='input-section'>
-                    <input onChange={e => setInputValue(e.target.value)} value={inputValue} type="text" placeholder='create playlist' />
+                    <input onChange={e => setInputValue(e.target.value)} value={inputValue} type="text" placeholder='create new playlist' />
                     <button onClick={()=>playlisthandler()}>Create Playlist</button>
                 </section>
                 <section className='playlist'>
                     {
+                        playLists !== undefined ?
                         playLists.map(playlist =>
-                            <label htmlFor="createPlaylist">
+                            <label htmlFor="createPlaylist" key={playlist._id}>
                                 <input onClick={() => addVideo(playlist._id)} type="checkbox" id='createPlaylist' value={playlist.title} /> {playlist.title}
                             </label>
-                        )
+                        ) :
+                        ""
                     }
                 </section>
             </section>

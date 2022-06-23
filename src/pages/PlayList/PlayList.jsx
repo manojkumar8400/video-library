@@ -22,13 +22,13 @@ export const PlayList = () => {
                         <div className='video-section grid gap-16 m-16'>
                             {
                                 playLists.map(i =>
-                                    <section className='playlist-item flex-center relative'>
+                                    <section className='playlist-item flex-center relative' key={i._id}>
                                         <Link to={`/playlist/${i._id}`}>
                                             <div className='playlist-children'>
                                                 <h3 className='color'>{i.title}</h3>
                                             </div>
                                         </Link>
-                                        <button onClick={_ => dispatch(deletePlayList(i._id))} className="delete-icon"><span class="material-icons color">delete</span></button>
+                                        <button onClick={_ => dispatch(deletePlayList(i._id))} className="delete-icon"><span className="material-icons color">delete</span></button>
                                     </section>
                                 )}
                         </div> :

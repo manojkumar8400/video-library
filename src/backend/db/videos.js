@@ -86,7 +86,6 @@ export const videos = [
     genre: "DW हिन्दी",
     logoURL: "https://yt3.ggpht.com/ytc/AKedOLQjtG818-C6gHmcCaTRNmrl4Q4hk4WPLyLLifk0ng=s68-c-k-c0x00ffffff-no-rj",
     description: "शहरी क्षेत्रों में छोटे जंगल बनाना जापान में शुरु हुआ था. यह विचार अब यूरोप में पकड़ में भी गति पकड़ रहा है. कंपनियां और स्कूल इसके लिए आगे आ रहे हैं.",
-
   },
   {
     _id: "OzQmbyaidbY",
@@ -131,30 +130,6 @@ export const videos = [
     genre: "DW हिन्दी",
     logoURL: "https://yt3.ggpht.com/ytc/AKedOLQjtG818-C6gHmcCaTRNmrl4Q4hk4WPLyLLifk0ng=s68-c-k-c0x00ffffff-no-rj",
     description: "जब से बिजली के बल्ब का आविष्कार हुआ है, दुनिया में जगमग लगातार बढ़ रही है. लेकिन रात के समय में कृत्रिम रोशनी की वजह से अब समस्याएं होने लगी हैं.",
-
-  },
-  {
-    _id: "B4n6s-onn-4",
-    title: "मानव बन रहा है दानव, खुद देखिए [Wildlife trafficking in Peru]",
-    views: "10M",
-    creator: "DW हिन्दी",
-    subscribers: "3.22M",
-    releaseTime: "6 months ago",
-    genre: "DW हिन्दी",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLQjtG818-C6gHmcCaTRNmrl4Q4hk4WPLyLLifk0ng=s68-c-k-c0x00ffffff-no-rj",
-    description: "दक्षिण अमेरिकी देश पेरू के एक इलाके में तमाम पाबंदियों और कोशिशों के बावजूद दुर्लभ किस्म के जीवों का शिकार नहीं रुक रहा है. अब भी विलुप्त होने की कगार पर जा पहुंचे जानवरों को जिंदा या मुर्दा बाजारों में देखा जा सकता है",
-
-  },
-  {
-    _id: "z12bz7adLKI",
-    title: "Waxing - Stand Up Comedy ft. Anubhav Singh Bassi",
-    views: "40M",
-    creator: "Anubhav Singh Bassi",
-    subscribers: "3.59M",
-    releaseTime: "3 Year ago",
-    genre: "Stand Up",
-    logoURL: "https://yt3.ggpht.com/ytc/AKedOLS7IEPwzVpf3MOKIBHsLlIIG_UTH7CKO2iKYNxw4A=s88-c-k-c0x00ffffff-no-rj",
-    description: "MY SECOND STAND UP VIDEO IS HERE! DO WRITE YOUR EXPERIENCES OF 'BEING STRONG' IN COMMENTS.",
   },
   {
     _id: "w7ejDZ8SWv8",
@@ -166,6 +141,28 @@ export const videos = [
     genre: "programming",
     logoURL: "https://yt3.ggpht.com/ytc/AKedOLSxHOOxxa9Af8Bfb2XMop3lm4tor9bViWiC-d5aaw=s88-c-k-c0x00ffffff-no-rj",
     description: "Get started with React in this crash course. We will be building a task tracker app and look at components, props, state, hooks, working with an API and more."
+  },
+  {
+    _id: "B4n6s-onn-4",
+    title: "मानव बन रहा है दानव, खुद देखिए [Wildlife trafficking in Peru]",
+    views: "10M",
+    creator: "DW हिन्दी",
+    subscribers: "3.22M",
+    releaseTime: "6 months ago",
+    genre: "DW हिन्दी",
+    logoURL: "https://yt3.ggpht.com/ytc/AKedOLQjtG818-C6gHmcCaTRNmrl4Q4hk4WPLyLLifk0ng=s68-c-k-c0x00ffffff-no-rj",
+    description: "दक्षिण अमेरिकी देश पेरू के एक इलाके में तमाम पाबंदियों और कोशिशों के बावजूद दुर्लभ किस्म के जीवों का शिकार नहीं रुक रहा है. अब भी विलुप्त होने की कगार पर जा पहुंचे जानवरों को जिंदा या मुर्दा बाजारों में देखा जा सकता है",
+  },
+  {
+    _id: "z12bz7adLKI",
+    title: "Waxing - Stand Up Comedy ft. Anubhav Singh Bassi",
+    views: "40M",
+    creator: "Anubhav Singh Bassi",
+    subscribers: "3.59M",
+    releaseTime: "3 Year ago",
+    genre: "Stand Up",
+    logoURL: "https://yt3.ggpht.com/ytc/AKedOLS7IEPwzVpf3MOKIBHsLlIIG_UTH7CKO2iKYNxw4A=s88-c-k-c0x00ffffff-no-rj",
+    description: "MY SECOND STAND UP VIDEO IS HERE! DO WRITE YOUR EXPERIENCES OF 'BEING STRONG' IN COMMENTS.",
   },
   {
     _id: "5-V0-y1iP3Q",
@@ -188,5 +185,38 @@ export const videos = [
     genre: "Stand Up",
     logoURL: "https://yt3.ggpht.com/ytc/AKedOLQ-IPFEzpiA0AqSSeK7ZiBWUfrG4a3OZar2p3tXNQ=s88-c-k-c0x00ffffff-no-rj",
     description: "MY THIRD STAND UP VIDEO IS HERE! DO WRITE YOUR EXPERIENCES OF 'BEING STRONG' IN COMMENTS.",
+  },
+  {
+    _id: "omARBqolqfo",
+    title: "Sehat Talk with Isha Bhatia Sanan, Ep. 18: Which is the best superfood for brain?",
+    views: "2M",
+    creator: "DW हिन्दी",
+    subscribers: "3.22M",
+    releaseTime: "1 months ago",
+    genre: "DW हिन्दी",
+    logoURL: "https://yt3.ggpht.com/ytc/AKedOLQjtG818-C6gHmcCaTRNmrl4Q4hk4WPLyLLifk0ng=s68-c-k-c0x00ffffff-no-rj",
+    description: "स्कूल या कॉलेज के टेस्ट शुरू होते ही, माएं बच्चों को बादाम-अखरोट खिलाना शुरू कर देती हैं. लेकिन क्या इनसे सच में दिमाग तेज चलता है? और अगर हां, तो आखिर इनमें ऐसा क्या होता है कि दिमाग का बर्ताव बदल जाता है?",
+  },
+  {
+    _id: "i3MWtUchXxc",
+    title: "React Redux with Redux Toolkit Complete in one Video (Hindi)",
+    views: "38K",
+    creator: "Geeky Shows",
+    subscribers: "429 K",
+    releaseTime: "1 year ago",
+    genre: "programming",
+    logoURL: "https://yt3.ggpht.com/ytc/AKedOLRruNCtXEbRiS21ZZVyNuLXNV6xhZMhb59YwcduIw=s88-c-k-c0x00ffffff-no-rj",
+    description: "React Redux with Redux Toolkit Complete in one Video Hindi"
+  },
+  {
+    _id: "XyqCFYnZ3EU",
+    title: "Noise Sent me a Special Box! *Smart Glasses*",
+    views: "1.4M",
+    creator: "Tech burner",
+    subscribers: "8.55M",
+    releaseTime: "1 months ago",
+    genre: "tech video",
+    logoURL: "https://yt3.ggpht.com/ytc/AKedOLSLzBlLalLFEXgvGHr6f9yBm9Y8PrJMXZC_hxTTlQ=s88-c-k-c0x00ffffff-no-rj",
+    description: "Ye BabuRao ka Chashma hai ! 🔥 Subscribe for Tabahi Videos"
   },
 ];
