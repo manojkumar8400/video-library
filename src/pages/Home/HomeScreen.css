@@ -7,7 +7,9 @@
     height: 91.5vh;
     background-image: url(https://images.pexels.com/photos/827209/pexels-photo-827209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
+    background-size: cover;
     background-size: 100% 100%;
+    width: 100%
 }
 
 .explore-btn {
@@ -20,9 +22,10 @@
     font-size: 1.1rem;
 }
 
-.font{
+.font {
     font-family: 'Libre Baskerville', serif;
 }
+
 .explore-btn:hover {
     background-color: var(--orange-900);
     border: 3px solid var(--secondary-color);
@@ -38,10 +41,16 @@
     background-color: transparent;
 }
 
-.category{
+.category {
     padding: .5rem 1rem;
     background-color: inherit;
     color: var(--orange-900);
     border-radius: .5rem;
     border: 2px solid;
+}
+
+@media screen and (max-width: 900px) {
+    .home-container {
+        height: 88vh;
+    }
 }

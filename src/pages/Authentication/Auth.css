@@ -1,9 +1,10 @@
 .signin-container {
     grid-template-columns: repeat(2, 1fr);
+    border: 2px solid;
 }
 
 .signin-img {
-    width: 130%;
+    width: 100%;
     height: 90vh;
 }
 
@@ -35,7 +36,7 @@
 .visibility-off {
     padding: 4px 3px;
     right: 2px;
-    top: 1.2rem;
+    top: 1.1rem;
     background-color: var(--primary-color);
 }
 
@@ -107,4 +108,26 @@
     border: 2px solid;
     height: fit-content;
     width: fit-content;
+}
+
+@media screen and (max-width: 900px) {
+    .signin-container {
+        display: flex;
+        justify-content: center;
+        height: 80vh;
+        line-height: .9rem;
+    }
+
+    .signin-container section:nth-child(1) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .input-label,
+    .signin {
+        font-size: .9rem;
+        width: 15rem;
+    }
+
 }

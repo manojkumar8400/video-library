@@ -1,11 +1,18 @@
+.loader,
+.page-status {
+    width: 100vw;
+}
+
 .filter-chips {
-    top: 8.5vh;
+    top: 8.65%;
     background-color: var(--primary-color);
     border-bottom: 1px solid var(--black-900);
+    white-space: nowrap;
+    overflow: scroll;
 }
 
 .filter-chips button {
-    font-size: .9rem;
+    font-size: 1rem;
     padding: 6px .8rem;
     border: 1px solid var(--secondary-color);
     border-radius: 1.2rem;
@@ -13,6 +20,72 @@
 }
 
 .item-container {
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin: 1rem;
+}
+
+.logo-title p {
+    font-size: 1rem;
+}
+
+.channel-creator p,
+.channel-creator section span {
+    font-size: .8rem;
+}
+
+.more-feature-icon-model {
+    right: 0%;
+    top: 70%;
+    visibility: hidden;
+}
+
+.item-section:hover .more-feature-icon-model {
+    visibility: inherit;
+}
+
+@media screen and (max-width: 1370px) {
+    .item-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .item-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .filter-chips {
+        top: 16%;
+    }
+
+    .item-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 4rem;
+    }
+
+    .logo-title p {
+        font-size: 1rem;
+    }
+
+    .channel-creator p,
+    .channel-creator section span {
+        font-size: .9rem;
+    }
+
+    .more-feature-icon-model {
+        visibility: inherit;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .item-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image img {
+        height: 30vh;
+    }
 }

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { likeGet, likeRemove } from '../../app/slice/featureSlice';
 import { Loader, VideoCard } from '../../components/index';
-import "./Likes.css";
 
 export const Likes = () => {
 
@@ -17,8 +16,10 @@ export const Likes = () => {
         <div>
             {
                 status ?
-                    (<Loader />) : getLikeData.length ?
-                        <section className='likedata grid gap-16'>
+                    <div className='loader'>
+                        <Loader />
+                    </div> : getLikeData.length ?
+                        <section className='item-container grid gap-16'>
                             {
                                 getLikeData.map((likeVideo) =>
                                     <div key={likeVideo._id} className="relative">
@@ -29,7 +30,7 @@ export const Likes = () => {
                             }
                         </section>
                         :
-                        <h3 className='text-align m-tb-8'> There is no liked video</h3>
+                        <h3 className='page-status text-align m-tb-8'> There is no liked video</h3>
             }
         </div>
     )

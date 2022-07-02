@@ -1,4 +1,7 @@
-# ViewTube - Video Library
+#  🔗[ViewTube](https://viewtube-video-library.netlify.app)
+
+## Description
+ViewTube is a Video library fully responsive website, in which user can watch specific videos. It consists of various Categories of Videos that provide complete satisfaction to user.
 
 ## Features
 
@@ -10,6 +13,7 @@
 - History Management
 - Filter videos by category
 - Search videos
+- Authentication
 
 ## Pages
 
@@ -21,7 +25,7 @@
 - History page
 - Single Video page
 - User Profile page
-- Login as a guest page
+- Login, Signup, Logout page
 
 ## Built using
 
