@@ -18,7 +18,7 @@ export const PlayListVideos = () => {
     };
 
     return (
-        <div className='video-section grid gap-16 m-16'>
+        <div className='item-container grid gap-16 m-16'>
             {
                 playListVideo !== undefined ?
                     playListVideo.videos.map(video =>
@@ -44,7 +44,7 @@ export const PlayListVideos = () => {
                             </div>
                         </section>
                     ) :
-                    <h2 className='text-align mr-16'>There is no video in this playlist</h2>
+                    <h2 className='page-status text-align mr-16'>There is no video in this playlist</h2>
             }
         </div>
     )

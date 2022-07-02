@@ -16,19 +16,21 @@ export const WatchLater = () => {
         <div>
             {
                 status ?
-                    (<Loader />) : watchlaterData !== undefined ?  watchlaterData.length ?
-                        <section className='likedata grid gap-16'>
+                    <div className='loader'>
+                        <Loader />
+                    </div> : watchlaterData !== undefined ? watchlaterData.length ?
+                        <section className='item-container grid gap-16'>
                             {
                                 watchlaterData.map((watchlaterVideo) =>
                                     <div key={watchlaterVideo._id} className="relative">
                                         < VideoCard video={watchlaterVideo} />
-                                        <button onClick={_=>{dispatch(watchlaterRemove(watchlaterVideo._id))}} className="delete-icon"><span class="material-icons">watch_later</span></button>
+                                        <button onClick={_ => { dispatch(watchlaterRemove(watchlaterVideo._id)) }} className="delete-icon"><span class="material-icons">watch_later</span></button>
                                     </div>
                                 )
                             }
                         </section>
-                        : <h3 className='text-align m-tb-8'> There is no video</h3> 
-                        : <h3 className='text-align m-tb-8'> There is no video</h3>
+                        : <h3 className='page-status text-align m-tb-8'> There is no video</h3>
+                        : <h3 className='page-status text-align m-tb-8'> There is no video</h3>
             }
         </div>
     )

@@ -17,9 +17,11 @@ export const PlayList = () => {
         <>
             {
                 status ?
-                    (<Loader />) :
+                    <div className='loader'>
+                        <Loader />
+                    </div> :
                     playLists.length ?
-                        <div className='video-section grid gap-16 m-16'>
+                        <div className='item-container grid gap-16 m-16'>
                             {
                                 playLists.map(i =>
                                     <section className='playlist-item flex-center relative' key={i._id}>
@@ -32,7 +34,7 @@ export const PlayList = () => {
                                     </section>
                                 )}
                         </div> :
-                        <h3 className='text-align'>There is no playlist</h3>
+                        <h3 className='page-status text-align'>There is no playlist</h3>
             }
         </>
     )

@@ -52,18 +52,24 @@ export const Explore = () => {
         <main>
             {
                 status ?
-                    (<Loader />) : (
+                    <div className='loader'>
+                        <Loader />
+                    </div> : (
                         <>
                             <section className='filter-chips sticky z-index-1'>
-                                {filterCategory.map(item => <button onClick={_ => dispatch(filterCat(item))} key={item}>{item}</button>)}
+                                {filterCategory.map(item =>
+                                    <button onClick={_ => dispatch(filterCat(item))} key={item}>
+                                        {item}
+                                    </button>
+                                )}
                             </section>
-                            <div className='item-container grid gap-16'>
+                            <div className='item-container gap-16'>
                                 {
                                     filterData().map((video) =>
                                         <div className='item-section c-pointer relative' key={video._id}>
-                                            <Link to={`/explore/${video._id}`}>
+                                            <Link to={`/explore/${video._id}`} className="link">
                                                 <section onClick={_ => dispatch(historyPost(video))} className='card-image'>
-                                                    <img src={`https://img.youtube.com/vi/${video._id}/mqdefault.jpg`} alt="video_thumbnail"></img>
+                                                    <img src={`https://img.youtube.com/vi/${video._id}/mqdefault.jpg`} alt="thumbnail"></img>
                                                 </section>
                                                 <section className='logo-title flex gap-8'>
                                                     <img className='channel-logo' src={video.logoURL} alt=" channel logo" />

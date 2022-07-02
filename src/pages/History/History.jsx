@@ -17,16 +17,18 @@ export const History = () => {
         <div>
             {
                 status ?
-                    <Loader /> :
+                    <div className='loader'>
+                        <Loader />
+                    </div> :
                     historyData.length ?
                         <>
                             <section className="delete-all-history flex justify-between m-t-8">
                                 <span className='delete-txt'>Watch History</span>
-                                <button onClick={_ => dispatch(historyRemoveAll())}className=" clear-history-btn">
+                                <button onClick={_ => dispatch(historyRemoveAll())} className=" clear-history-btn">
                                     clear history
                                 </button>
                             </section>
-                            <section className='likedata grid gap-16'>
+                            <section className='item-container grid gap-16'>
                                 {
                                     historyData.map((historyVideo) =>
                                         <div key={historyVideo._id} className="relative">
@@ -37,7 +39,7 @@ export const History = () => {
                             </section>
                         </>
                         :
-                        <h3 className='text-align m-tb-8'>History is Empty</h3>
+                        <h3 className='page-status text-align m-tb-8'>History is Empty</h3>
             }
         </div>
     )

@@ -28,7 +28,9 @@ export const SingleVideo = () => {
         <main className='single-video-container grid gap-16'>
             {
                 status ?
-                    (< Loader />) :
+                    <div className='loader'>
+                        < Loader />
+                    </div> :
                     <>
                         <section>
                             <iframe className='video-frame' src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`} frameBorder="0" allow="accelerometer; autoplay; fullscreenn" />

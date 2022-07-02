@@ -40,7 +40,7 @@ export const Signup = () => {
                         <button className='signin'>SignUp</button>
                         <span className='m-auto'>
                             Already a member?
-                            <Link to="/signin" className='fs text-align m-auto'> Signin</Link>
+                            <Link to="/login" className='fs text-align m-auto'> Signin</Link>
                         </span>
                     </section>
                 </div>

@@ -12,7 +12,7 @@ export const Header = () => {
     const { loginStatus } = useSelector(store => store.auth);
 
     return (
-        <header className='header-bar flex sticky p-16 z-index-1'>
+        <header className='header-bar flex p-16 z-index-1'>
             <section className="flex gap-32">
                 <button onClick={() => dispatch(sideToggle(toggle ? false : true))} className="bg-transparent c-pointer b-none"><span className='material-icons fs-24 '>menu</span></button>
                 <Link to="/">
