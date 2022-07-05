@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <div className="App">
-      <ToastContainer
+      <ToastContainer className="toast-container"
         position="top-right"
         autoClose={2000}
         pauseOnHover={false}

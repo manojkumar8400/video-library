@@ -88,4 +88,13 @@
     .card-image img {
         height: 30vh;
     }
+
+    .toast-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 95% !important;
+        height: 20vh !important;
+    }
 }
