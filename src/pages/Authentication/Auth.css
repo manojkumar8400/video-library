@@ -1,6 +1,5 @@
 .signin-container {
     grid-template-columns: repeat(2, 1fr);
-    border: 2px solid;
 }
 
 .signin-img {

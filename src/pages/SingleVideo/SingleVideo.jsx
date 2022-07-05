@@ -32,7 +32,7 @@ export const SingleVideo = () => {
                         < Loader />
                     </div> :
                     <>
-                        <section>
+                        <section className='i-frame-section'>
                             <iframe className='video-frame' src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`} frameBorder="0" allow="accelerometer; autoplay; fullscreenn" />
                             {
                                 videos.map((video) => {

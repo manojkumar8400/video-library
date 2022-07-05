@@ -1,5 +1,5 @@
-.single-video-container {
-    margin: 1rem 2rem;
+.i-frame-section{
+    margin: 1rem;
 }
 
 .video-frame {
@@ -47,12 +47,16 @@
 
 @media screen and (max-width: 900px) {
     .video-frame {
-        height: 40vh;
+        height: 50vh;
     }
 }
 
 @media screen and (max-width: 600px) {
     .video-frame {
-        height: 30vh;
+        height: 33vh;
+    }
+
+    .data-title {
+        font-size: 1.1rem;
     }
 }

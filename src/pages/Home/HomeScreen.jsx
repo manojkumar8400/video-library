@@ -24,7 +24,7 @@ export const Home = () => {
                     <button className='explore-btn fs-16 m-tb-32'>Explore</button>
                 </Link>
                 <Link to="explore">
-                    <section className='flex flex-wrap justify-center gap-16 '>
+                    <section className='flex flex-wrap justify-center gap-16'>
                         {filterCategory.map(item => <button onClick={_ => dispatch(filterCat(item))} key={item} className="category">{item}</button>)}
                     </section>
                 </Link>
