@@ -9,7 +9,7 @@ export const Header = () => {
 
     const dispatch = useDispatch();
     const { toggle } = useSelector((state) => state.operator);
-    const { loginStatus } = useSelector(store => store.auth);
+    const { status } = useSelector(store => store.auth);
 
     return (
         <header className='header-bar flex p-16 z-index-1'>
@@ -30,7 +30,7 @@ export const Header = () => {
             </section>
             <section className="flex justify-center c-pointer">
                 {
-                    loginStatus ?
+                    status ?
                         <Link to="logout" className='signin-btn bg-transparent'>
                             <span className="material-icons  fs-32">person</span>
                         </Link> :

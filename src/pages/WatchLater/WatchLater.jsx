@@ -13,7 +13,7 @@ export const WatchLater = () => {
     }, [dispatch])
 
     return (
-        <div>
+        <>
             {
                 status ?
                     <div className='loader'>
@@ -24,7 +24,7 @@ export const WatchLater = () => {
                                 watchlaterData.map((watchlaterVideo) =>
                                     <div key={watchlaterVideo._id} className="relative">
                                         < VideoCard video={watchlaterVideo} />
-                                        <button onClick={_ => { dispatch(watchlaterRemove(watchlaterVideo._id)) }} className="delete-icon"><span class="material-icons">watch_later</span></button>
+                                        <button onClick={_ => { dispatch(watchlaterRemove(watchlaterVideo._id)) }} className="delete-icon"><span className="material-icons">watch_later</span></button>
                                     </div>
                                 )
                             }
@@ -32,6 +32,6 @@ export const WatchLater = () => {
                         : <h3 className='page-status text-align m-tb-8'> There is no video</h3>
                         : <h3 className='page-status text-align m-tb-8'> There is no video</h3>
             }
-        </div>
+        </>
     )
 }

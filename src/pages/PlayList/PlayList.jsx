@@ -19,8 +19,7 @@ export const PlayList = () => {
                 status ?
                     <div className='loader'>
                         <Loader />
-                    </div> :
-                    playLists.length ?
+                    </div> : playLists !== undefined ? playLists.length ?
                         <div className='item-container grid gap-16 m-16'>
                             {
                                 playLists.map(i =>
@@ -33,8 +32,9 @@ export const PlayList = () => {
                                         <button onClick={_ => dispatch(deletePlayList(i._id))} className="delete-icon"><span className="material-icons color">delete</span></button>
                                     </section>
                                 )}
-                        </div> :
-                        <h3 className='page-status text-align'>There is no playlist</h3>
+                        </div> 
+                        : <h3 className='page-status text-align m-tb-8'>There is no playlist</h3>
+                        : <h3 className='page-status text-align m-tb-8'>There is no playlist</h3>
             }
         </>
     )

@@ -6,7 +6,7 @@ import { logoutHandler } from '../../app/slice/authSlice';
 export const Logout = () => {
 
     const dispatch = useDispatch();
-    const { status } = useSelector(store=>store.auth);
+    const { status } = useSelector(store => store.auth);
     const [backBtn, setBackBtn] = useState(false)
 
     return (
@@ -19,15 +19,10 @@ export const Logout = () => {
                         <p>manojkumar@gmail.com</p>
                     </span>
                 </section>
-                <button onClick={_ => { dispatch(logoutHandler()); setBackBtn(true) }} className='logout-btn'>Logout</button>
+                <Link to="/">
+                    <button onClick={_ => { dispatch(logoutHandler()); setBackBtn(true) }} className='logout-btn'>Logout</button>
+                </Link>
             </div>
-            {
-                backBtn && <div className='home-btn'>
-                    <Link to="/">
-                        <h3>Back To Home Page</h3>
-                    </Link>
-                </div>
-            }
         </main >
     )
 }

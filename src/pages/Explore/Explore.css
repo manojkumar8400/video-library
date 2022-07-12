@@ -1,14 +1,15 @@
 .loader,
 .page-status {
-    width: 100vw;
+    width: 100%;
 }
 
 .filter-chips {
-    top: 8.65%;
+    position: fixed;
+    top: 9%;
+    width: 100%;
     background-color: var(--primary-color);
     border-bottom: 1px solid var(--black-900);
     white-space: nowrap;
-    overflow: scroll;
 }
 
 .filter-chips button {
@@ -25,6 +26,10 @@
     margin: 1rem;
 }
 
+.explore-item {
+    margin-top: 3.5rem;
+}
+
 .logo-title p {
     font-size: 1rem;
 }
@@ -32,6 +37,15 @@
 .channel-creator p,
 .channel-creator section span {
     font-size: .8rem;
+}
+
+.more-option-model {
+    background-color: var(--primary-color);
+    box-shadow: 2px 2px 5px var(--gray-900);
+    width: fit-content;
+    padding: 5px 5px;
+    right: .6rem;
+    top: 77%;
 }
 
 .more-feature-icon-model {
@@ -77,6 +91,10 @@
 
     .more-feature-icon-model {
         visibility: inherit;
+    }
+
+    .delete-icon {
+        top: 75%;
     }
 }
 

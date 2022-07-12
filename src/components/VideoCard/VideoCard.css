@@ -1,12 +1,12 @@
 .item-section:hover {
     box-shadow: 1px 1px 1px var(--gray-900),
-        1px 1px 2px var(--gray-900);
+                1px 1px 2px var(--gray-900);
 }
 
 .card-image img {
     width: 100%;
     height: 22vh;
-}
+}   
 
 .logo-title {
     margin: 5px 1.5rem .2rem 5px;
@@ -26,15 +26,6 @@
     color: var(--gray-900);
     margin-left: 3.2rem;
     font-size: .7rem;
-}
-
-.more-option-model {
-    background-color: var(--primary-color);
-    box-shadow: 2px 2px 5px var(--gray-900);
-    width: fit-content;
-    padding: 5px 5px;
-    right: .6rem;
-    top: 13rem;
 }
 
 .fs {

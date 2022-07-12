@@ -40,7 +40,7 @@ export const PlayListVideos = () => {
                                         </section>
                                     </section>
                                 </Link>
-                                <button onClick={_ => deleteHandler(playListVideo._id, video._id)} className="delete-icon"><span class="material-icons">delete</span></button>
+                                <button onClick={_ => deleteHandler(playListVideo._id, video._id)} className="delete-icon"><span className="material-icons">delete</span></button>
                             </div>
                         </section>
                     ) :

@@ -8,15 +8,17 @@ export const likePost = createAsyncThunk("features/likePost", async (video) => {
         const res = await axios.post("/api/user/likes", {
             video: video
         },
-        {
-            headers: {
+            {
+                headers: {
                     "authorization": localStorage.getItem("authToken")
                 }
-            }
-            );
-
+            });
+        toast.success("Added to Like")
+        const data = res.data.likes;
+        return data;
     } catch (error) {
         console.log(error);
+        toast.error("Please login first");
     }
 })
 
@@ -53,7 +55,6 @@ export const likeRemove = createAsyncThunk("features/likeremove", async (videoId
     }
 })
 
-
 export const watchLaterPost = createAsyncThunk("features/watchLaterPost", async (video) => {
     try {
         const res = await axios.post("/api/user/watchlater", {
@@ -63,10 +64,13 @@ export const watchLaterPost = createAsyncThunk("features/watchLaterPost", async 
                 headers: {
                     "authorization": localStorage.getItem("authToken")
                 }
-            }
-        );
+            });
+        toast.success("Added to Watchlater");
+        const data = res.data.watchlater;
+        return data;
     } catch (error) {
         console.log(error);
+        toast.error("Please login first");
     }
 })
 
@@ -159,6 +163,7 @@ export const historyRemoveAll = createAsyncThunk("features/historyRemoveAll", as
                 authorization: localStorage.getItem("authToken")
             }
         })
+        toast.success("All items are removed");
         const data = res.data.history;
         return data
     } catch (error) {
@@ -166,26 +171,25 @@ export const historyRemoveAll = createAsyncThunk("features/historyRemoveAll", as
     }
 })
 
-
 const initialState = {
     status: true,
     checkGener: "",
     getLikeData: [],
     watchlaterData: [],
     historyData: [],
-    filterValue:"All",
+    filterValue: "All",
     searchValue: ""
 }
 
 const featureSlice = createSlice({
     name: "features",
     initialState,
-    reducers: { 
-        filterCat: (state, {payload}) => {
+    reducers: {
+        filterCat: (state, { payload }) => {
             state.filterValue = payload;
         },
 
-        searchItem: (state, {payload}) => {
+        searchItem: (state, { payload }) => {
             state.searchValue = payload;
         }
     },
@@ -196,13 +200,12 @@ const featureSlice = createSlice({
         [likePost.pending]: (state) => {
             state.status = true;
         },
-        [likePost.fulfilled]: (state) => {
+        [likePost.fulfilled]: (state, {payload}) => {
             state.status = false;
-            toast.success("Added to Like");
+            state.getLikeData = payload;
         },
         [likePost.rejected]: (state) => {
             state.status = false
-            toast.error("Request Reject");
         },
 
 
@@ -225,14 +228,14 @@ const featureSlice = createSlice({
         [likeRemove.pending]: (state) => {
             state.status = true
         },
-        [likeRemove.fulfilled]: (state, {payload}) => {
+        [likeRemove.fulfilled]: (state, { payload }) => {
             state.status = false;
             state.getLikeData = payload;
             toast.success("Remove from Like");
         },
         [likePost.rejected]: (state) => {
             state.status = false
-            toast.error("Request Reject ",{
+            toast.error("Request Reject ", {
                 position: "top-right"
             });
         },
@@ -242,15 +245,15 @@ const featureSlice = createSlice({
         [watchLaterPost.pending]: (state) => {
             state.status = true;
         },
-        [watchLaterPost.fulfilled]: (state) => {
+        [watchLaterPost.fulfilled]: (state, { payload }) => {
             state.status = false;
-            toast.success("Added to Watchlater");
+            state.watchlaterData = payload;
         },
         [watchLaterPost.rejected]: (state) => {
             state.status = false
         },
 
-        //      Watchlater Get Request
+        //      Watchlater Post Request
 
         [watchLaterGet.pending]: (state) => {
             state.status = true;
@@ -261,7 +264,6 @@ const featureSlice = createSlice({
         },
         [watchLaterGet.rejected]: (state) => {
             state.status = false;
-            toast.error("Reject Request");
         },
 
         //      Watchlater Remove Request
@@ -269,7 +271,7 @@ const featureSlice = createSlice({
         [watchlaterRemove.pending]: (state) => {
             state.status = true
         },
-        [watchlaterRemove.fulfilled]: (state, {payload}) => {
+        [watchlaterRemove.fulfilled]: (state, { payload }) => {
             state.status = false;
             state.watchlaterData = payload;
             toast.success("Remove from Watchlater");
@@ -290,9 +292,9 @@ const featureSlice = createSlice({
             state.status = false
         },
 
-         //      History Get Request
+        //      History Get Request
 
-         [historyGet.pending]: (state) => {
+        [historyGet.pending]: (state) => {
             state.status = true;
         },
         [historyGet.fulfilled]: (state, { payload }) => {
@@ -308,7 +310,7 @@ const featureSlice = createSlice({
         [historyRemove.pending]: (state) => {
             state.status = true
         },
-        [historyRemove.fulfilled]: (state, {payload}) => {
+        [historyRemove.fulfilled]: (state, { payload }) => {
             state.status = false;
             state.historyData = payload;
         },
@@ -321,7 +323,7 @@ const featureSlice = createSlice({
         [historyRemoveAll.pending]: (state) => {
             state.status = true
         },
-        [historyRemoveAll.fulfilled]: (state, {payload}) => {
+        [historyRemoveAll.fulfilled]: (state, { payload }) => {
             state.status = false;
             state.historyData = payload;
         },

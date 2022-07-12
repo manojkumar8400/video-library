@@ -8,7 +8,7 @@ export const SideBar = () => {
     const { toggle } = useSelector((state) => state.operator)
 
     return (
-        <aside style={{ display: toggle ? "none" : "inherit" }} className='sidebar-container'>
+        <aside style={{ display: toggle ? "none" : "inherit" }} className='sidebar-container sticky'>
             <ul>
                 <li className='sidebar-icon'>
                     <NavLink to="/" id='sidebar-icon' className={({ isActive }) => (isActive ? "active" : undefined)}>

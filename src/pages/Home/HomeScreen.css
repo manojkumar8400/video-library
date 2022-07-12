@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100% 100%;
-    width: 100%
+    width: 100%;
 }
 
 .explore-btn {
@@ -51,6 +51,6 @@
 
 @media screen and (max-width: 900px) {
     .home-container {
-        height: 88vh;
+        height: 83vh;
     }
 }

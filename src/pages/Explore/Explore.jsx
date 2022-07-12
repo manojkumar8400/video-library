@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./Explore.css";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../../app/slice/dataSlice';
 import { Loader, PlaylistModal } from '../../components/index';
@@ -14,13 +14,10 @@ export const Explore = () => {
     const { filterValue, searchValue, watchlaterData } = useSelector(store => store.features);
     const dispatch = useDispatch();
 
-
     const [addModel, setAddModel] = useState(false);
     const [value, setValue] = useState();
-    const navigate = useNavigate();
     const { addfeaturesIcon, showPlaylistModel } = useSelector(store => store.operator);
-    const { loginStatus } = useSelector(store => store.auth);
-
+    
     const playlistHandler = (video) => {
         setAddModel(false);
         dispatch(playlistModal(true));
@@ -49,21 +46,21 @@ export const Explore = () => {
     const filterCategory = videos.reduce((acc, curr) => acc.includes(curr.genre) ? acc : [...acc, curr.genre], ["All"]);
 
     return (
-        <main>
+        <>
             {
                 status ?
                     <div className='loader'>
                         <Loader />
                     </div> : (
                         <>
-                            <section className='filter-chips sticky z-index-1'>
+                            <section className='filter-chips z-index-1'>
                                 {filterCategory.map(item =>
                                     <button onClick={_ => dispatch(filterCat(item))} key={item}>
                                         {item}
                                     </button>
                                 )}
                             </section>
-                            <div className='item-container gap-16'>
+                            <section className='item-container explore-item gap-16'>
                                 {
                                     filterData().map((video) =>
                                         <div className='item-section c-pointer relative' key={video._id}>
@@ -87,14 +84,16 @@ export const Explore = () => {
                                             {
                                                 video._id === addfeaturesIcon && addModel ?
                                                     <section className='more-option-model absolute'>
-                                                        {watchlaterData.some((checkId) => checkId.id === video.id) ? (
-                                                            <button onClick={_ => { loginStatus ? setAddModel(false) : navigate("/login"); dispatch(watchlaterRemove(video._id)) }} className='flex b-none gap-8 bg-transparent'>
+                                                        {watchlaterData.some((checkId) => checkId._id === video._id) ? (
+                                                            <button onClick={_ => { dispatch(watchlaterRemove(video._id)); setAddModel(false) }} className='flex b-none gap-8 bg-transparent'>
                                                                 <span className='material-icons'>watch_later</span>
-                                                                <span className='fs'>Remove From Watch Later</span></button>
+                                                                <span className='fs'>Remove From Watch Later</span>
+                                                            </button>
                                                         ) : (
-                                                            <button onClick={_ => { loginStatus ? setAddModel(false) : navigate("/login"); dispatch(watchLaterPost(video)) }} className='flex b-none gap-8 bg-transparent'>
+                                                            <button onClick={_ => { dispatch(watchLaterPost(video)); setAddModel(false) }} className='flex b-none gap-8 bg-transparent'>
                                                                 <span className='material-icons'>watch_later</span>
-                                                                <span className='fs'>Add to Watch later</span></button>
+                                                                <span className='fs'>Add to Watch later</span>
+                                                            </button>
                                                         )}
                                                         <button onClick={() => playlistHandler(video)} className='flex b-none gap-8 bg-transparent'><span className="material-icons">create_new_folder</span><span className='fs'> Add to Playlist</span></button>
                                                     </section>
@@ -108,9 +107,9 @@ export const Explore = () => {
                                         </div>
                                     )
                                 }
-                            </div>
+                            </section>
                         </>
                     )}
-        </main>
+        </>
     )
 }
