@@ -18,14 +18,14 @@ export const AppRoutes = () => {
                 <Routes>
                     <Route path='/' element={< Home />} />
                     <Route path='/explore' element={< Explore />} />
-                    <Route path='/explore/:videoId' element={< SingleVideo />} />
 
                     <Route element={< RequireAuth />}>
-                    <Route path='/like' element={< Likes />} />
-                    <Route path="/history" element={< History />} />
-                    <Route path='/watchlater' element={< WatchLater />} />
-                    <Route path="/playlist" element={< PlayList />} />
-                    <Route path="/playlist/:playlistId" element={< PlayListVideos />} />
+                        <Route path='/explore/:videoId' element={< SingleVideo />} />
+                        <Route path='/like' element={< Likes />} />
+                        <Route path="/history" element={< History />} />
+                        <Route path='/watchlater' element={< WatchLater />} />
+                        <Route path="/playlist" element={< PlayList />} />
+                        <Route path="/playlist/:playlistId" element={< PlayListVideos />} />
                     </Route>
 
                     <Route path="/login" element={< Login />} />

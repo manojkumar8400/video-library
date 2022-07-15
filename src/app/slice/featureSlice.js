@@ -20,7 +20,7 @@ export const likePost = createAsyncThunk("features/likePost", async (video) => {
         console.log(error);
         toast.error("Please login first");
     }
-})
+});
 
 
 export const likeGet = createAsyncThunk("features/likeGet", async () => {
@@ -37,7 +37,7 @@ export const likeGet = createAsyncThunk("features/likeGet", async () => {
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 export const likeRemove = createAsyncThunk("features/likeremove", async (videoId) => {
     try {
@@ -53,7 +53,7 @@ export const likeRemove = createAsyncThunk("features/likeremove", async (videoId
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 export const watchLaterPost = createAsyncThunk("features/watchLaterPost", async (video) => {
     try {
@@ -72,7 +72,7 @@ export const watchLaterPost = createAsyncThunk("features/watchLaterPost", async 
         console.log(error);
         toast.error("Please login first");
     }
-})
+});
 
 export const watchLaterGet = createAsyncThunk("features/watchLaterGet", async () => {
     try {
@@ -88,7 +88,7 @@ export const watchLaterGet = createAsyncThunk("features/watchLaterGet", async ()
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 export const watchlaterRemove = createAsyncThunk("features/watchlaterRemove", async (videoId) => {
     try {
@@ -104,7 +104,7 @@ export const watchlaterRemove = createAsyncThunk("features/watchlaterRemove", as
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 export const historyPost = createAsyncThunk("features/historyPost", async (video) => {
     try {
@@ -120,7 +120,7 @@ export const historyPost = createAsyncThunk("features/historyPost", async (video
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 export const historyGet = createAsyncThunk("features/historyGet", async () => {
     try {
@@ -136,7 +136,7 @@ export const historyGet = createAsyncThunk("features/historyGet", async () => {
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 export const historyRemove = createAsyncThunk("features/historyRemove", async (videoId) => {
     try {
@@ -152,7 +152,7 @@ export const historyRemove = createAsyncThunk("features/historyRemove", async (v
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 export const historyRemoveAll = createAsyncThunk("features/historyRemoveAll", async () => {
     try {
@@ -169,7 +169,7 @@ export const historyRemoveAll = createAsyncThunk("features/historyRemoveAll", as
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 const initialState = {
     status: true,

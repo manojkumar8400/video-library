@@ -13,7 +13,7 @@ ViewTube is a Video library fully responsive website, in which user can watch sp
 - History Management
 - Filter videos by category
 - Search videos
-- Authentication
+- Authentication-Login,Signup,Logout
 
 ## Pages
 
