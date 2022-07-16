@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import "./Header.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { sideToggle } from '../../app/slice/operatorSlice';
@@ -10,6 +10,14 @@ export const Header = () => {
     const dispatch = useDispatch();
     const { toggle } = useSelector((state) => state.operator);
     const { status } = useSelector(store => store.auth);
+    let timer = useRef(null);
+
+    const debounce = (value, delay) => {
+        clearTimeout(timer);
+        timer = setTimeout(()=>{
+            dispatch(searchItem(value))
+        },delay)
+    };
 
     return (
         <header className='header-bar flex p-16 z-index-1'>
@@ -23,7 +31,7 @@ export const Header = () => {
                 </Link>
             </section>
             <section className="flex-center">
-                <input onChange={e=>{dispatch(searchItem(e.target.value))}} className='search-bar' type="search" placeholder='search' />
+                <input onChange={e => { debounce( e.target.value, 1000 )}} className='search-bar' type="search" placeholder='search' />
                 <section className="search-btn flex">
                     <span className='material-icons fs-32 p-lr-8'>search</span>
                 </section>

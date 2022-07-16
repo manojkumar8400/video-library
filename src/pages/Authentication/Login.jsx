@@ -11,7 +11,8 @@ export const Login = () => {
     const [visibility, setVisibility] = useState(true);
     const [error, setError] = useState({ isError: true })
     const [loginDetail, setLoginDetail] = useState({
-        email: "", password: ""
+        email: "",
+        password: ""
     });
     const { status, user } = useSelector(store => store.auth);
     const dispatch = useDispatch();
@@ -58,7 +59,7 @@ export const Login = () => {
                         Enter Email Address
                         <input
                             onChange={e => inputHandler(e.target)}
-                            className='input-text'
+                            className={`input-text ${error.email && "wrong-information"}`}
                             value={loginDetail.email}
                             type="text"
                             name="email"
@@ -66,12 +67,11 @@ export const Login = () => {
                             placeholder='abc@gmail.com'
                         />
                     </label>
-                    {error.email && <div>{error.email}</div>}
                     <label className='input-label flex-column relative' >
                         Enter Password
                         <input
                             onChange={e => inputHandler(e.target)}
-                            className='input-password'
+                            className={`input-password ${error.password && "wrong-information" }`}
                             value={loginDetail.password}
                             type={visibility ? "password" : "text"}
                             name="password"
@@ -90,7 +90,6 @@ export const Login = () => {
                                 </span>
                         }
                     </label>
-                    {error.password && <div>{error.password}</div>}
                     <section className='flex justify-between'>
                         <label className='checkbox-label'>
                             <input className='checkbox-input' type="checkbox" />

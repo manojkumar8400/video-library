@@ -36,6 +36,8 @@ const initialState = {
     status: localStorage.getItem("status"),
     authToken: localStorage.getItem("authToken") || null,
     user: localStorage.getItem("user") || null,
+    lName: "" || "kumar",
+    mail: "" || "manojkumar@gmail.com"
 }
 
 const authSlice = createSlice({
@@ -58,6 +60,8 @@ const authSlice = createSlice({
         [postLogin.fulfilled]: (state, { payload }) => {
             state.authToken = payload.encodedToken;
             state.user = payload.foundUser.firstName;
+            state.lname = payload.foundUser.lastName;
+            state.mail = payload.foundUser.email;
         },
         [postLogin.rejected]: (state) => {
             state.status = false;
@@ -70,6 +74,8 @@ const authSlice = createSlice({
         [postSignup.fulfilled]: (state, {payload}) => {
             state.authToken = payload.encodedToken;
             state.user = payload.createdUser.firstName;
+            state.lname = payload.createdUser.lastName;
+            state.mail = payload.createdUser.email;
         },
         [postSignup.rejected]: (state) => {
             state.status = false;

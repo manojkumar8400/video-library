@@ -18,11 +18,11 @@ export const Signup = () => {
     });
     const signupDispatch = useDispatch();
 
-    useEffect(()=>{
-        if(!error.isError){
+    useEffect(() => {
+        if (!error.isError) {
             signupDispatch(postSignup(userDetail))
         };
-    });
+    }, [error]);
 
     const inputHandler = (e) => {
         const { name, value } = e;
@@ -50,6 +50,7 @@ export const Signup = () => {
                             value={userDetail.firstname}
                             className='input-text'
                             type="text"
+                            required
                             placeholder='Manoj'
                         />
                     </label>
@@ -61,6 +62,7 @@ export const Signup = () => {
                             value={userDetail.lastname}
                             className='input-text'
                             type="text"
+                            required
                             placeholder='Kumar'
                         />
                     </label>
@@ -70,8 +72,9 @@ export const Signup = () => {
                             onChange={e => inputHandler(e.target)}
                             name="email"
                             value={userDetail.email}
-                            className='input-text'
+                            className={`input-text ${error.email && "wrong-information"}`}
                             type="text"
+                            required
                             placeholder='abc@gmail.com'
                         />
                     </label>
@@ -81,8 +84,9 @@ export const Signup = () => {
                             onChange={e => inputHandler(e.target)}
                             name="password"
                             value={userDetail.password}
-                            className='input-text'
+                            className={`input-text ${error.password && "wrong-information"}`}
                             type="password"
+                            required
                             placeholder='********'
                         />
                     </label>
@@ -92,8 +96,9 @@ export const Signup = () => {
                             onChange={e => inputHandler(e.target)}
                             name="confirmpassword"
                             value={userDetail.confirmpassword}
-                            className='input-text'
+                            className={`input-text ${error.confirmpassword && "wrong-information"}`}
                             type="password"
+                            required
                             placeholder='********'
                         />
                     </label>

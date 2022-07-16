@@ -200,7 +200,7 @@ const featureSlice = createSlice({
         [likePost.pending]: (state) => {
             state.status = true;
         },
-        [likePost.fulfilled]: (state, {payload}) => {
+        [likePost.fulfilled]: (state, { payload }) => {
             state.status = false;
             state.getLikeData = payload;
         },
@@ -253,7 +253,7 @@ const featureSlice = createSlice({
             state.status = false
         },
 
-        //      Watchlater Post Request
+        //      Watchlater Get Request
 
         [watchLaterGet.pending]: (state) => {
             state.status = true;

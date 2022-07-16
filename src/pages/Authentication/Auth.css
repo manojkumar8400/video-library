@@ -96,11 +96,11 @@
 }
 
 .avatar {
-    border: 2px solid;
-    width: fit-content;
-    padding: 1.2rem .8rem;
-    border-radius: 50%;
-    border-color: var(--secondary-color);
+    width: 5rem;
+}
+
+.wrong-information{
+    border: 2px solid red;
 }
 
 @media screen and (max-width: 900px) {
