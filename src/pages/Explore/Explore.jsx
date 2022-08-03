@@ -52,10 +52,10 @@ export const Explore = () => {
                     <div className='loader'>
                         <Loader />
                     </div> : (
-                        <>
+                        <div className='relative'>
                             <section className='filter-chips z-index-1'>
-                                {filterCategory.map(item =>
-                                    <button onClick={_ => dispatch(filterCat(item))} key={item}>
+                                {filterCategory.map(item => 
+                                    <button onClick={_ => dispatch(filterCat(item))} className={filterValue === item ? "filter-chips-btn" : undefined} key={item}>
                                         {item}
                                     </button>
                                 )}
@@ -108,7 +108,7 @@ export const Explore = () => {
                                     )
                                 }
                             </section>
-                        </>
+                        </div>
                     )}
         </>
     )

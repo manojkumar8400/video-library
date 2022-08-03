@@ -49,7 +49,7 @@ const authSlice = createSlice({
             state.user = localStorage.removeItem("user");
             localStorage.removeItem("status", false);
             state.status = false;
-            toast.info("Successfully logout")
+            toast.info("Successfully logged out")
         }
     },
 
