@@ -75,6 +75,16 @@
             "search search";
     }
 
+    .mobile-disappear{
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .header-bar section button {
         display: none;
     }

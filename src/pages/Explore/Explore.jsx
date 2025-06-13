@@ -6,7 +6,7 @@ import { fetchData } from '../../app/slice/dataSlice';
 import { Loader, PlaylistModal } from '../../components/index';
 import { filterCat, historyPost, watchLaterPost, watchlaterRemove } from '../../app/slice/featureSlice';
 import { addFeatures, playlistModal } from '../../app/slice/operatorSlice';
-
+import { setLastRoute } from "../../app/slice/routeSlice";
 
 export const Explore = () => {
 
@@ -26,6 +26,7 @@ export const Explore = () => {
 
     useEffect(_ => {
         dispatch(fetchData())
+        dispatch(setLastRoute("/explore"));
     }, [dispatch])
 
     const filterData = () => {
