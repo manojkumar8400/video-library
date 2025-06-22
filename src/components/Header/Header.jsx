@@ -10,6 +10,7 @@ export const Header = () => {
     const dispatch = useDispatch();
     const { toggle } = useSelector((state) => state.operator);
     const { status } = useSelector(store => store.auth);
+    const lastRoute = useSelector((state) => state.route.lastRoute);
     let timer = useRef(null);
 
     const debounce = (value, delay) => {
@@ -20,9 +21,9 @@ export const Header = () => {
     };
 
     return (
-        <header className='header-bar flex p-16 z-index-1'>
+        <header className={`${lastRoute !== "/explore" ? 'mobile-header' : '' } header-bar flex p-16 z-index-1`}>
             <section className="flex gap-32">
-                <button onClick={() => dispatch(sideToggle(toggle ? false : true))} className="bg-transparent c-pointer b-none"><span className='material-icons fs-24 '>menu</span></button>
+                <button onClick={() => dispatch(sideToggle(!toggle))} className="bg-transparent c-pointer b-none mobile-disappear"><span className='material-icons fs-24 '>menu</span></button>
                 <Link to="/">
                     <section className='flex justify-center'>
                         <img className='vl-logo' src="/favicon.png" alt="logo-img" />
@@ -30,12 +31,15 @@ export const Header = () => {
                     </section>
                 </Link>
             </section>
-            <section className="flex-center">
-                <input onChange={e => { debounce( e.target.value, 1000 )}} className='search-bar' type="search" placeholder='search' />
-                <section className="search-btn flex">
-                    <span className='material-icons fs-32 p-lr-8'>search</span>
+            {
+                lastRoute === "/explore" &&
+                <section className="flex-center">
+                    <input onChange={e => { debounce( e.target.value, 1000 )}} className='search-bar' type="search" placeholder='search' />
+                    <section className="search-btn flex">
+                        <span className='material-icons fs-32 p-lr-8'>search</span>
+                    </section>
                 </section>
-            </section>
+            }
             <section className="flex justify-center c-pointer">
                 {
                     status ?

@@ -4,7 +4,7 @@ import dataReducer from "./slice/dataSlice";
 import authReducer from "./slice/authSlice";
 import featuresReducer from "./slice/featureSlice";
 import playListreducer from "./slice/playListSlice";
-
+import routeReducer from "./slice/routeSlice";
 
 export const store = configureStore({
     reducer:{
@@ -12,6 +12,7 @@ export const store = configureStore({
         data: dataReducer,
         auth: authReducer,
         features: featuresReducer,
-        playList: playListreducer
+        playList: playListreducer,
+        route: routeReducer
     }
 })

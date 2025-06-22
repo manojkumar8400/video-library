@@ -12,9 +12,7 @@ export const AppRoutes = () => {
         <div>
             < Header />
             <div className={`${toggle ? "inherit" : "routes-container"}`}>
-                <div>
-                    <SideBar />
-                </div>
+                <SideBar />
                 <Routes>
                     <Route path='/' element={< Home />} />
                     <Route path='/explore' element={< Explore />} />
